@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfoliogogogo/art_page.dart';
+import 'package:portfoliogogogo/creation_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,6 +51,41 @@ class _MyHomePageState extends State<MyHomePage> {
               //   fontSize:50,
               //   color: Colors.white,
               // )),
+              SizedBox(height: 50),
+              Row(
+                children:[
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                          foregroundColor: Colors.black,
+                          ),
+                        child: Text('Artworks',
+                        style: TextStyle(
+                          color: Colors.white,
+                        )),
+                        onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ArtPage())
+                        );
+                      }),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                          foregroundColor: Colors.black,
+                          ),
+                        child: Text('Creations',
+                        style: TextStyle(
+                          color: Colors.white,
+                        )),
+                        onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CreationPage())
+                        );
+                      }),
+                ],
+              ),
               const Text('My portfolio',
               style:TextStyle(
                 fontSize:50,
@@ -78,19 +114,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   height:60,
                   width: 120,
                   ),
-          
         ),  
             ]
-           
-             
         ),
-        
-            
           ),
       ),
       );
   }
 }
-/*
-
-*/
