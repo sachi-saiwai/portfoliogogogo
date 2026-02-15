@@ -12,16 +12,16 @@ class DrawingPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('2026.1/22-1/30_drawing',
+            Text('2026.1/22-1/30_drawing',
             textAlign: TextAlign.center,
             style:TextStyle(
-              fontSize:50, 
+              fontSize:MediaQuery.of(context).size.height * 0.03, 
               color: Colors.white,
             )),
-            const Text('まなざす・まなざされるというテーマのもとに制作・展示を行いました',
+            Text('まなざす・まなざされるというテーマのもとに制作・展示を行いました',
             textAlign: TextAlign.center,
             style:TextStyle(
-              fontSize:40, 
+              fontSize:MediaQuery.of(context).size.height * 0.02, 
               color: Colors.white,
               fontFamily: 'tukumaru',
             )),
@@ -35,25 +35,35 @@ class DrawingPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container(child:Image.asset('assets/drawing.jpg'),width:MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  child: InteractiveViewer(
+                    maxScale: 6.0,
+                    child: Image.asset(
+                      'assets/drawing.jpg',
+                      fit: BoxFit.contain,
+                      ),
+              ),
+            ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                Container(child:Image.asset('assets/d1.JPG'),width:MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,),
+                buildImage(context, 'assets/d1.JPG'),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                Container(child:Image.asset('assets/d2.JPG'),width:MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,),
+                buildImage(context, 'assets/d2.JPG'),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                Container(child:Image.asset('assets/d3.JPG'),width:MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,),
+                buildImage(context, 'assets/d3.JPG'),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                Container(child:Image.asset('assets/d4.JPG'),width:MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,),
+                buildImage(context, 'assets/d4.JPG'),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                Container(child:Image.asset('assets/d5.JPG'),width:MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,),
+                  buildImage(context, 'assets/d5.JPG'),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                Container(child:Image.asset('assets/d6.JPG'),width:MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,),
+                buildImage(context, 'assets/d6.JPG'),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                Container(child:Image.asset('assets/d7.JPG'),width:MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,),
+                buildImage(context, 'assets/d7.JPG'),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                Container(child:Image.asset('assets/d8.JPG'),width:MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,),
+                buildImage(context, 'assets/d8.JPG'),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-                Container(child:Image.asset('assets/d9.JPG'),width:MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,),
+                buildImage(context, 'assets/d9.JPG'),
               ]
                 )
            ), 
@@ -65,6 +75,15 @@ class DrawingPage extends StatelessWidget {
           
         ),
       );
+  }
+  Widget buildImage(BuildContext context, String imagePath) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      child: InteractiveViewer(
+        maxScale: 6.0,
+        child: Image.asset(imagePath),
+      ),
+    );
   }
 
   

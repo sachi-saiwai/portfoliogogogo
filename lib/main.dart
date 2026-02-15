@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfoliogogogo/art_page.dart';
 import 'package:portfoliogogogo/creation_page.dart';
+import 'package:portfoliogogogo/link_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Container(
         decoration: BoxDecoration(color: Colors.black),
         child: SingleChildScrollView(
@@ -84,6 +86,21 @@ class _MyHomePageState extends State<MyHomePage> {
                           MaterialPageRoute(builder: (context) => CreationPage())
                         );
                       }),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                          foregroundColor: Colors.black,
+                          ),
+                        child: Text('Links',
+                        style: TextStyle(
+                          color: Colors.white,
+                        )),
+                        onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LinkPage())
+                        );
+                      }),
                 ],
               ),
               const Text('My portfolio',
@@ -97,24 +114,24 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container(child:Image.asset('assets/kuma.png'),width:MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,),
+                  Container(child:Image.asset('assets/kuma.png'),height:MediaQuery.of(context).size.height * 0.9,),
                 ]
                   )
              ),
-             ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ArtPage()),
-                );
-                },
-                child:Container(
-                  alignment: Alignment.center,
-                  child: Text('My artworks'),
-                  height:60,
-                  width: 120,
-                  ),
-        ),  
+        //      ElevatedButton(
+        //       // onPressed: () {
+        //       //   Navigator.push(
+        //       //   context,
+        //       //   MaterialPageRoute(builder: (context) => ArtPage()),
+        //       //   );
+        //       //   },
+        //         child:Container(
+        //           alignment: Alignment.center,
+        //           child: Text('My artworks'),
+        //           height:60,
+        //           width: 120,
+        //           ),
+        // ),  
             ]
         ),
           ),
