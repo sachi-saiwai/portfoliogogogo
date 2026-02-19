@@ -45,24 +45,24 @@ class DrawingPage extends StatelessWidget {
                       ),
               ),
             ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.04),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                 buildImage(context, 'assets/d1.JPG'),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 buildImage(context, 'assets/d2.JPG'),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 buildImage(context, 'assets/d3.JPG'),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 buildImage(context, 'assets/d4.JPG'),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                   buildImage(context, 'assets/d5.JPG'),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 buildImage(context, 'assets/d6.JPG'),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 buildImage(context, 'assets/d7.JPG'),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 buildImage(context, 'assets/d8.JPG'),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                 buildImage(context, 'assets/d9.JPG'),
               ]
                 )
@@ -78,7 +78,7 @@ class DrawingPage extends StatelessWidget {
   }
   Widget buildImage(BuildContext context, String imagePath) {
     return Container(
-      width: MediaQuery.of(context).size.width,
+      width: MediaQuery.of(context).size.width * 0.9,
       child: InteractiveViewer(
         maxScale: 6.0,
         child: Image.asset(imagePath),

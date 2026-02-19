@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfoliogogogo/drawing_page.dart';
+
 class ArtPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,51 +10,56 @@ class ArtPage extends StatelessWidget {
       //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       // ),
       body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('嵯峨幸子の描いたものたち',
-            textAlign: TextAlign.center,
-            style:TextStyle(
-              fontSize:50, 
-              color: Colors.white,
-            )),
-            // const Text('描いたもの',
-            // style:TextStyle(
-            //   fontSize:50,
-            // )
-            // ),
-           SingleChildScrollView(
-           scrollDirection: Axis.horizontal,
-            child: Column(
+        child: Center(
+          child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DrawingPage()),
-                      );
-                  },
-                  child: Container(child:Image.asset('assets/drawing.jpg'),width:MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,),
+                Text('嵯峨幸子の描いたものたち',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.height * 0.03,
+                      color: Colors.white,
+                    )),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DrawingPage()));
+                        },
+                        child: Stack(alignment: Alignment.center, children: [
+                          Container(
+                            alignment: Alignment.center,
+                            child: Image.asset('assets/drawing.png'),
+                            width: MediaQuery.of(context).size.width * 0.8,
+                            height: MediaQuery.of(context).size.height,
+                          ),
+                          Text('please click me!',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize:MediaQuery.of(context).size.height * 0.05, 
+                                color: Colors.white,
+                                fontFamily: 'tukumaru',
+                              )),
+                          SizedBox(height: 20),
+
+                          // Container(child:Image.asset('assets/portfolioneko.png'),width:350,height:350,),
+                          // SizedBox(height: 20),
+                          // Container(child:Image.asset('assets/du.jpeg'),width:350,height:350,),
+                          // SizedBox(height: 20),
+                        ]),
+                      ),
+                    ],
+                  ),
                 ),
-                SizedBox(height: 20),
-                // Container(child:Image.asset('assets/portfolioneko.png'),width:350,height:350,),
-                // SizedBox(height: 20),
-                // Container(child:Image.asset('assets/du.jpeg'),width:350,height:350,),
-                // SizedBox(height: 20),
-              ]
-                )
-           ), 
-          ]
-         
-           
-      ),
-
-          
+              ]),
         ),
-      );
+      ),
+    );
   }
-
-  
 }
