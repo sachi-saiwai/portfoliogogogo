@@ -6,20 +6,23 @@ class ArtPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      // appBar: AppBar(
-      //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      // ),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        ),
+        title: Text('嵯峨幸子の描いたものたち',
+            style: TextStyle(
+              fontSize: MediaQuery.of(context).size.height * 0.03,
+              color: Colors.white,
+            )),
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text('嵯峨幸子の描いたものたち',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: MediaQuery.of(context).size.height * 0.03,
-                      color: Colors.white,
-                    )),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Column(
@@ -42,7 +45,8 @@ class ArtPage extends StatelessWidget {
                           Text('please click me!',
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                fontSize:MediaQuery.of(context).size.height * 0.05, 
+                                fontSize:
+                                    MediaQuery.of(context).size.height * 0.05,
                                 color: Colors.white,
                                 fontFamily: 'tukumaru',
                               )),

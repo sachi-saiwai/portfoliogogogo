@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
         decoration: BoxDecoration(color: Colors.black),
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               // const Text('私の',
               // style:TextStyle(
@@ -109,12 +109,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.white,
               )
               ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.01),
              SingleChildScrollView(
              scrollDirection: Axis.horizontal,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Container(child:Image.asset('assets/kuma.png'),height:MediaQuery.of(context).size.height * 0.9,),
+                  Container(child:Image.asset('assets/kuma.png'),height:MediaQuery.of(context).size.height * 0.9,width:MediaQuery.of(context).size.width * 0.9,),
                 ]
                   )
              ),
