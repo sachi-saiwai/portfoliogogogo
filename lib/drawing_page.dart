@@ -26,7 +26,6 @@ class DrawingPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: MediaQuery.of(context).size.height * 0.02,
                     color: Colors.white,
-                    fontFamily: 'tukumaru',
                   )),
               // const Text('描いたもの',
               // style:TextStyle(

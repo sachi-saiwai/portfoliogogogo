@@ -12,7 +12,7 @@ class ArtPage extends StatelessWidget {
           icon: Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.pop(context),
         ),
-        title: Text('嵯峨幸子の描いたものたち',
+        title: Text('わたしの描いたものたち',
             style: TextStyle(
               fontSize: MediaQuery.of(context).size.height * 0.03,
               color: Colors.white,
