@@ -1,6 +1,6 @@
 {
-    "name": "portfoliogogogo",
-    "short_name": "portfoliogogogo",
+    "name": "portfolio",
+    "short_name": "portfolio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
