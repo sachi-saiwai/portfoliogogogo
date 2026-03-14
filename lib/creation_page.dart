@@ -22,7 +22,7 @@ class CreationPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Text('嵯峨幸子の作ったもの',
+              Text('わたしの作ったもの',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: MediaQuery.of(context).size.height * 0.02,
