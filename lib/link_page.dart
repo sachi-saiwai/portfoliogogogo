@@ -82,6 +82,7 @@ class LinkPage extends StatelessWidget {
                   fontSize: MediaQuery.of(context).size.height * 0.03,
                 )),
           ),
+          
         ]),
       ),
     );
