@@ -82,7 +82,19 @@ class LinkPage extends StatelessWidget {
                   fontSize: MediaQuery.of(context).size.height * 0.03,
                 )),
           ),
-          
+          // SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+          // InkWell(
+          //   onTap: () async {
+          //     await launchUrl(Uri.parse(
+          //       'https:a.com',
+          //     ));
+          //   },
+          //   child: Text('a',
+          //       style: TextStyle(
+          //         color: Colors.white,
+          //         fontSize: MediaQuery.of(context).size.height * 0.03,
+          //       )),
+          // ),
         ]),
       ),
     );
