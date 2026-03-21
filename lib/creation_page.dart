@@ -22,12 +22,16 @@ class CreationPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Text('わたしの作ったもの',
+              Center(
+                child: Text(
+                  'わたしの作ったもの',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: MediaQuery.of(context).size.height * 0.02,
                     color: Colors.white,
-                  )),
+                  ),
+                ),
+              ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.01),
               Text('ポートフォリオサイトの作成',
                   textAlign: TextAlign.center,
@@ -54,14 +58,17 @@ class CreationPage extends StatelessWidget {
                           height: 200,
                         ),
                       ),
-                      SizedBox(height: 12),
-                      Text(
+                      SizedBox(width: 12),
+                      Expanded(
+                        child: Text(
                         'flutterの学習を始めたので、アウトプットの一環としてこのポートフォリオサイトを作成しました。',
+                        softWrap: true,
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: MediaQuery.of(context).size.height * 0.02,
                         ),
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.left,
+                      ),
                       ),
                     ],
                   ),
